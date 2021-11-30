@@ -14,7 +14,7 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(4500)
 })
 input.onButtonPressed(Button.AB, function () {
-    if (MicroBitNr > 12) {
+    if (MicroBitNr >= 12) {
         MicroBitNr = 1
         radio.setGroup(MicroBitNr)
         basic.showNumber(MicroBitNr)
@@ -55,7 +55,7 @@ input.onGesture(Gesture.ThreeG, function () {
     }
 })
 let MicroBitNr = 0
-MicroBitNr = 0
+MicroBitNr = 1
 radio.setGroup(MicroBitNr)
 basic.showNumber(MicroBitNr)
 basic.pause(3000)
