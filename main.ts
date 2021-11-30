@@ -1,8 +1,8 @@
 radio.onReceivedNumber(function (receivedNumber) {
     basic.showIcon(IconNames.Pitchfork)
+    music.startMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once)
     basic.pause(1000)
     basic.showNumber(MicroBitNr)
-    music.startMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once)
     for (let index = 0; index < 3; index++) {
         basic.showString("* VR *")
         basic.showArrow(ArrowNames.NorthEast)
@@ -29,8 +29,8 @@ input.onButtonPressed(Button.AB, function () {
 })
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "PAUSE") {
-        soundExpression.yawn.playUntilDone()
-        for (let index = 0; index < 4; index++) {
+        for (let index = 0; index < 3; index++) {
+            soundExpression.yawn.playUntilDone()
             basic.showLeds(`
                 . # . # .
                 . # . # .
@@ -38,7 +38,7 @@ radio.onReceivedString(function (receivedString) {
                 . # . # .
                 . # . # .
                 `)
-            basic.pause(1000)
+            basic.pause(2000)
             basic.showString(receivedString)
             basic.clearScreen()
         }
