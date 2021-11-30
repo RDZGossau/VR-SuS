@@ -2,11 +2,11 @@ radio.onReceivedNumber(function (receivedNumber) {
     basic.showIcon(IconNames.Pitchfork)
     music.startMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once)
     basic.pause(1000)
-    basic.showNumber(MicroBitNr)
     for (let index = 0; index < 3; index++) {
-        basic.showString("* VR *")
+        basic.showString("* VR")
         basic.showArrow(ArrowNames.NorthEast)
     }
+    basic.showNumber(MicroBitNr)
 })
 input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Happy)
